@@ -18,7 +18,7 @@ Make sure the files in `src/main/java` are updated.
 
 The project uses Maven for dependency management and compilation.
 
-If you which to use Maven for your project too you can add this project as a dependency, add this to your `pom.xml` file:
+If you wish to use Maven for your project too you can add this project as a dependency, add this to your `pom.xml` file:
 
     <dependency>
       <groupId>es.upm.fi.emse.hotelmania</groupId>
