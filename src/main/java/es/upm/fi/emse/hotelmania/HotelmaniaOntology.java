@@ -9,7 +9,7 @@ import jade.core.CaseInsensitiveString;
 
 /** file: HotelmaniaOntology.java
  * @author ontology bean generator
- * @version 2015/04/24, 17:49:57
+ * @version 2015/04/30, 15:38:44
  */
 public class HotelmaniaOntology extends jade.content.onto.Ontology  {
   //NAME
@@ -23,8 +23,17 @@ public class HotelmaniaOntology extends jade.content.onto.Ontology  {
 
 
    // VOCABULARY
+    public static final String REQUESTBANKACCOUNTSTATUS_HOTEL="hotel";
+    public static final String REQUESTBANKACCOUNTSTATUS="RequestBankAccountStatus";
+    public static final String RESPONSEBANKACCOUNTSTATUS_BALANCE="balance";
+    public static final String RESPONSEBANKACCOUNTSTATUS="ResponseBankAccountStatus";
     public static final String HOTELREGISTRATION_HOTEL="hotel";
     public static final String HOTELREGISTRATION="HotelRegistration";
+    public static final String OPENBANKACCOUNT_HOTEL="hotel";
+    public static final String OPENBANKACCOUNT="OpenBankAccount";
+    public static final String BANKACCOUNT_BALANCE="balance";
+    public static final String BANKACCOUNT_HOTELID="hotelId";
+    public static final String BANKACCOUNT="BankAccount";
     public static final String HOTEL_HOTELID="hotelId";
     public static final String HOTEL="Hotel";
 
@@ -38,10 +47,18 @@ public class HotelmaniaOntology extends jade.content.onto.Ontology  {
     // adding Concept(s)
     ConceptSchema hotelSchema = new ConceptSchema(HOTEL);
     add(hotelSchema, es.upm.fi.emse.hotelmania.Hotel.class);
+    ConceptSchema bankAccountSchema = new ConceptSchema(BANKACCOUNT);
+    add(bankAccountSchema, es.upm.fi.emse.hotelmania.BankAccount.class);
 
     // adding AgentAction(s)
+    AgentActionSchema openBankAccountSchema = new AgentActionSchema(OPENBANKACCOUNT);
+    add(openBankAccountSchema, es.upm.fi.emse.hotelmania.OpenBankAccount.class);
     AgentActionSchema hotelRegistrationSchema = new AgentActionSchema(HOTELREGISTRATION);
     add(hotelRegistrationSchema, es.upm.fi.emse.hotelmania.HotelRegistration.class);
+    AgentActionSchema responseBankAccountStatusSchema = new AgentActionSchema(RESPONSEBANKACCOUNTSTATUS);
+    add(responseBankAccountStatusSchema, es.upm.fi.emse.hotelmania.ResponseBankAccountStatus.class);
+    AgentActionSchema requestBankAccountStatusSchema = new AgentActionSchema(REQUESTBANKACCOUNTSTATUS);
+    add(requestBankAccountStatusSchema, es.upm.fi.emse.hotelmania.RequestBankAccountStatus.class);
 
     // adding AID(s)
 
@@ -50,7 +67,12 @@ public class HotelmaniaOntology extends jade.content.onto.Ontology  {
 
     // adding fields
     hotelSchema.add(HOTEL_HOTELID, (TermSchema)getSchema(BasicOntology.STRING), ObjectSchema.MANDATORY);
-    hotelRegistrationSchema.add(HOTELREGISTRATION_HOTEL, hotelSchema, ObjectSchema.OPTIONAL);
+    bankAccountSchema.add(BANKACCOUNT_HOTELID, (TermSchema)getSchema(BasicOntology.STRING), ObjectSchema.MANDATORY);
+    bankAccountSchema.add(BANKACCOUNT_BALANCE, (TermSchema)getSchema(BasicOntology.FLOAT), ObjectSchema.MANDATORY);
+    openBankAccountSchema.add(OPENBANKACCOUNT_HOTEL, hotelSchema, ObjectSchema.MANDATORY);
+    hotelRegistrationSchema.add(HOTELREGISTRATION_HOTEL, hotelSchema, ObjectSchema.MANDATORY);
+    responseBankAccountStatusSchema.add(RESPONSEBANKACCOUNTSTATUS_BALANCE, (TermSchema)getSchema(BasicOntology.FLOAT), ObjectSchema.MANDATORY);
+    requestBankAccountStatusSchema.add(REQUESTBANKACCOUNTSTATUS_HOTEL, hotelSchema, ObjectSchema.MANDATORY);
 
     // adding name mappings
 

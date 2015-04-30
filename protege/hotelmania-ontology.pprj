@@ -1,13 +1,13 @@
-; Fri Apr 24 16:18:35 CEST 2015
+; Thu Apr 30 15:24:22 CEST 2015
 ; 
-;+ (version "3.5")
-;+ (build "Build 663")
+;+ (version "3.4.8")
+;+ (build "Build 629")
 
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[hotelmania-ontology_ProjectKB_Class42]
-		[hotelmania-ontology_ProjectKB_Class43]))
+		[hotelmania-ontology_ProjectKB_Class12]
+		[hotelmania-ontology_ProjectKB_Class13]))
 
 ([CLSES_TAB] of  Widget
 
@@ -23,36 +23,72 @@
 	(property_list [ProjectKB_7094_00034])
 	(widget_class_name "edu.stanford.smi.protege.widget.FormsTab"))
 
-([hotelmania-ontology_ProjectKB_Class42] of  String
+([hotelmania-ontology_ProjectKB_Class10] of  Widget
 
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
+	(is_hidden TRUE)
+	(property_list [hotelmania-ontology_ProjectKB_Class11])
+	(widget_class_name "org.protege.owl.axiome.ui.AxiomeTab"))
 
-([hotelmania-ontology_ProjectKB_Class43] of  String
+([hotelmania-ontology_ProjectKB_Class11] of  Property_List
+)
+
+([hotelmania-ontology_ProjectKB_Class12] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([hotelmania-ontology_ProjectKB_Class44] of  Map_Entry
+([hotelmania-ontology_ProjectKB_Class13] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([hotelmania-ontology_ProjectKB_Class14] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([hotelmania-ontology_ProjectKB_Class45] of  Map_Entry
+([hotelmania-ontology_ProjectKB_Class15] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([hotelmania-ontology_ProjectKB_Class46] of  Map_Entry
+([hotelmania-ontology_ProjectKB_Class16] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
+
+([hotelmania-ontology_ProjectKB_Class4] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [hotelmania-ontology_ProjectKB_Class5])
+	(widget_class_name "org.protege.owl.mm.protege3.MappingMasterTab"))
+
+([hotelmania-ontology_ProjectKB_Class5] of  Property_List
+)
+
+([hotelmania-ontology_ProjectKB_Class6] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [hotelmania-ontology_ProjectKB_Class7])
+	(widget_class_name "edu.stanford.smi.protege.query.LuceneQueryPlugin"))
+
+([hotelmania-ontology_ProjectKB_Class7] of  Property_List
+)
+
+([hotelmania-ontology_ProjectKB_Class8] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [hotelmania-ontology_ProjectKB_Class9])
+	(widget_class_name "edu.stanford.smi.protegex.changeanalysis.ChangeAnalysisTab"))
+
+([hotelmania-ontology_ProjectKB_Class9] of  Property_List
+)
 
 ([INSTANCES_TAB] of  Widget
 
@@ -61,7 +97,7 @@
 	(property_list [ProjectKB_7094_00037])
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_535723_Class3] of  Map
+([KB_751981_Class3] of  Map
 )
 
 ([KB_883944_Instance_0] of  Property_List
@@ -435,42 +471,6 @@
 	(x 0)
 	(y 120))
 
-([paintServOntology_ProjectKB_Class10] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [paintServOntology_ProjectKB_Class11])
-	(widget_class_name "org.protege.owl.axiome.ui.AxiomeTab"))
-
-([paintServOntology_ProjectKB_Class11] of  Property_List
-)
-
-([paintServOntology_ProjectKB_Class4] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [paintServOntology_ProjectKB_Class5])
-	(widget_class_name "edu.stanford.smi.protege.query.LuceneQueryPlugin"))
-
-([paintServOntology_ProjectKB_Class5] of  Property_List
-)
-
-([paintServOntology_ProjectKB_Class6] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [paintServOntology_ProjectKB_Class7])
-	(widget_class_name "org.protege.owl.mm.portability.protege3.MappingMasterTab"))
-
-([paintServOntology_ProjectKB_Class7] of  Property_List
-)
-
-([paintServOntology_ProjectKB_Class8] of  Widget
-
-	(is_hidden TRUE)
-	(property_list [paintServOntology_ProjectKB_Class9])
-	(widget_class_name "edu.stanford.smi.protegex.changeanalysis.ChangeAnalysisTab"))
-
-([paintServOntology_ProjectKB_Class9] of  Property_List
-)
-
 ([PAL_FORM_WIDGET] of  Widget
 
 	(height 476)
@@ -488,8 +488,8 @@
 	(customized_instance_widgets
 		[SimpleJADEAbstractOntology_ProjectKB_00109]
 		[SimpleJADEAbstractOntology_ProjectKB_00503]
-		[SimpleJADEAbstractOntology_ProjectKB_00104]
 		[STANDARD_SLOT_FORM_WIDGET]
+		[SimpleJADEAbstractOntology_ProjectKB_00104]
 		[PAL_FORM_WIDGET]
 		[SimpleJADEAbstractOntology_ProjectKB_00303]
 		[STANDARD_CLASS_FORM_WIDGET])
@@ -694,9 +694,9 @@
 ([SimpleJADEAbstractOntology_ProjectKB_00214] of  Map
 
 	(entries
-		[hotelmania-ontology_ProjectKB_Class44]
-		[hotelmania-ontology_ProjectKB_Class45]
-		[hotelmania-ontology_ProjectKB_Class46]))
+		[hotelmania-ontology_ProjectKB_Class14]
+		[hotelmania-ontology_ProjectKB_Class15]
+		[hotelmania-ontology_ProjectKB_Class16]))
 
 ([SimpleJADEAbstractOntology_ProjectKB_00303] of  Widget
 

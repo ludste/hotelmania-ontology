@@ -6,11 +6,11 @@ import jade.util.leap.*;
 import jade.core.*;
 
 /**
-* Protege name: HotelRegistration
+* Protege name: OpenBankAccount
 * @author ontology bean generator
 * @version 2015/04/30, 15:38:44
 */
-public class HotelRegistration implements AgentAction {
+public class OpenBankAccount implements AgentAction {
 
    /**
 * Protege name: hotel
