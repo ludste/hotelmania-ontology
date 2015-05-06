@@ -8,7 +8,7 @@ import jade.core.*;
 /**
 * Protege name: RequestBankAccountStatus
 * @author ontology bean generator
-* @version 2015/04/30, 15:38:44
+* @version 2015/05/6, 20:18:40
 */
 public class RequestBankAccountStatus implements AgentAction {
 
