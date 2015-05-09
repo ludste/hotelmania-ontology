@@ -9,7 +9,7 @@ import jade.core.CaseInsensitiveString;
 
 /** file: HotelmaniaOntology.java
  * @author ontology bean generator
- * @version 2015/05/9, 15:17:15
+ * @version 2015/05/9, 20:33:24
  */
 public class HotelmaniaOntology extends jade.content.onto.Ontology  {
   //NAME
@@ -25,6 +25,9 @@ public class HotelmaniaOntology extends jade.content.onto.Ontology  {
    // VOCABULARY
     public static final String REQUESTBANKACCOUNTSTATUS_HOTEL="hotel";
     public static final String REQUESTBANKACCOUNTSTATUS="RequestBankAccountStatus";
+    public static final String CHAREGESTAFFHOTEL_HOTEL="hotel";
+    public static final String CHAREGESTAFFHOTEL_BILL="bill";
+    public static final String CHAREGESTAFFHOTEL="CharegeStaffHotel";
     public static final String RESPONSEBANKACCOUNTSTATUS_BALANCE="balance";
     public static final String RESPONSEBANKACCOUNTSTATUS="ResponseBankAccountStatus";
     public static final String HOTELREGISTRATION_HOTEL="hotel";
@@ -79,6 +82,8 @@ public class HotelmaniaOntology extends jade.content.onto.Ontology  {
     add(hotelRegistrationSchema, es.upm.fi.emse.hotelmania.HotelRegistration.class);
     AgentActionSchema responseBankAccountStatusSchema = new AgentActionSchema(RESPONSEBANKACCOUNTSTATUS);
     add(responseBankAccountStatusSchema, es.upm.fi.emse.hotelmania.ResponseBankAccountStatus.class);
+    AgentActionSchema charegeStaffHotelSchema = new AgentActionSchema(CHAREGESTAFFHOTEL);
+    add(charegeStaffHotelSchema, es.upm.fi.emse.hotelmania.CharegeStaffHotel.class);
     AgentActionSchema requestBankAccountStatusSchema = new AgentActionSchema(REQUESTBANKACCOUNTSTATUS);
     add(requestBankAccountStatusSchema, es.upm.fi.emse.hotelmania.RequestBankAccountStatus.class);
 
@@ -104,6 +109,8 @@ public class HotelmaniaOntology extends jade.content.onto.Ontology  {
     openBankAccountSchema.add(OPENBANKACCOUNT_HOTEL, hotelSchema, ObjectSchema.MANDATORY);
     hotelRegistrationSchema.add(HOTELREGISTRATION_HOTEL, hotelSchema, ObjectSchema.MANDATORY);
     responseBankAccountStatusSchema.add(RESPONSEBANKACCOUNTSTATUS_BALANCE, (TermSchema)getSchema(BasicOntology.FLOAT), ObjectSchema.MANDATORY);
+    charegeStaffHotelSchema.add(CHAREGESTAFFHOTEL_BILL, (TermSchema)getSchema(BasicOntology.FLOAT), ObjectSchema.MANDATORY);
+    charegeStaffHotelSchema.add(CHAREGESTAFFHOTEL_HOTEL, hotelSchema, ObjectSchema.MANDATORY);
     requestBankAccountStatusSchema.add(REQUESTBANKACCOUNTSTATUS_HOTEL, hotelSchema, ObjectSchema.MANDATORY);
 
     // adding name mappings

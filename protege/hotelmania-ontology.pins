@@ -1,4 +1,4 @@
-; Sat May 09 15:15:27 CEST 2015
+; Sat May 09 20:32:53 CEST 2015
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -16,6 +16,10 @@
 	(%3AJADE-IGNORE TRUE))
 
 ([BankAccount] of  %3AJADE-CLASS
+
+	(%3AJADE-IGNORE FALSE))
+
+([charegeStaffHotel] of  %3AJADE-CLASS
 
 	(%3AJADE-IGNORE FALSE))
 
