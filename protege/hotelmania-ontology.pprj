@@ -1,4 +1,4 @@
-; Wed May 06 19:12:53 CEST 2015
+; Sat May 09 15:15:27 CEST 2015
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -34,13 +34,13 @@
 
 ([hotelmania-ontology_ProjectKB_Class12] of  String
 
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
 
 ([hotelmania-ontology_ProjectKB_Class13] of  String
 
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
 
 ([hotelmania-ontology_ProjectKB_Class14] of  Map_Entry
 
@@ -97,7 +97,7 @@
 	(property_list [ProjectKB_7094_00037])
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_243319_Class3] of  Map
+([KB_249229_Class3] of  Map
 )
 
 ([KB_883944_Instance_0] of  Property_List
@@ -488,8 +488,8 @@
 	(customized_instance_widgets
 		[SimpleJADEAbstractOntology_ProjectKB_00109]
 		[SimpleJADEAbstractOntology_ProjectKB_00503]
-		[SimpleJADEAbstractOntology_ProjectKB_00104]
 		[STANDARD_SLOT_FORM_WIDGET]
+		[SimpleJADEAbstractOntology_ProjectKB_00104]
 		[PAL_FORM_WIDGET]
 		[SimpleJADEAbstractOntology_ProjectKB_00303]
 		[STANDARD_CLASS_FORM_WIDGET])

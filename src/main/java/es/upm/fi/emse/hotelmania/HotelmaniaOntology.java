@@ -9,7 +9,7 @@ import jade.core.CaseInsensitiveString;
 
 /** file: HotelmaniaOntology.java
  * @author ontology bean generator
- * @version 2015/05/6, 20:18:40
+ * @version 2015/05/9, 15:17:15
  */
 public class HotelmaniaOntology extends jade.content.onto.Ontology  {
   //NAME
@@ -31,6 +31,7 @@ public class HotelmaniaOntology extends jade.content.onto.Ontology  {
     public static final String HOTELREGISTRATION="HotelRegistration";
     public static final String OPENBANKACCOUNT_HOTEL="hotel";
     public static final String OPENBANKACCOUNT="OpenBankAccount";
+    public static final String REQUESTSTAFF_REQUESTINGHOTEL="requestingHotel";
     public static final String REQUESTSTAFF_STAFF="staff";
     public static final String REQUESTSTAFF="RequestStaff";
     public static final String CURRENTTIME_TIME="time";
@@ -99,6 +100,7 @@ public class HotelmaniaOntology extends jade.content.onto.Ontology  {
     bankAccountSchema.add(BANKACCOUNT_ACCOUNTID, (TermSchema)getSchema(BasicOntology.STRING), ObjectSchema.MANDATORY);
     currentTimeSchema.add(CURRENTTIME_TIME, timeSchema, ObjectSchema.MANDATORY);
     requestStaffSchema.add(REQUESTSTAFF_STAFF, staffSchema, ObjectSchema.MANDATORY);
+    requestStaffSchema.add(REQUESTSTAFF_REQUESTINGHOTEL, hotelSchema, ObjectSchema.MANDATORY);
     openBankAccountSchema.add(OPENBANKACCOUNT_HOTEL, hotelSchema, ObjectSchema.MANDATORY);
     hotelRegistrationSchema.add(HOTELREGISTRATION_HOTEL, hotelSchema, ObjectSchema.MANDATORY);
     responseBankAccountStatusSchema.add(RESPONSEBANKACCOUNTSTATUS_BALANCE, (TermSchema)getSchema(BasicOntology.FLOAT), ObjectSchema.MANDATORY);

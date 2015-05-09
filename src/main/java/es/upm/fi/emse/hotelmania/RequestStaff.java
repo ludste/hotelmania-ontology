@@ -8,7 +8,7 @@ import jade.core.*;
 /**
 * Protege name: RequestStaff
 * @author ontology bean generator
-* @version 2015/05/6, 20:18:40
+* @version 2015/05/9, 15:17:15
 */
 public class RequestStaff implements AgentAction {
 
@@ -21,6 +21,17 @@ public class RequestStaff implements AgentAction {
    }
    public Staff getStaff() {
      return this.staff;
+   }
+
+   /**
+* Protege name: requestingHotel
+   */
+   private Hotel requestingHotel;
+   public void setRequestingHotel(Hotel value) { 
+    this.requestingHotel=value;
+   }
+   public Hotel getRequestingHotel() {
+     return this.requestingHotel;
    }
 
 }

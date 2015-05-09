@@ -1,4 +1,4 @@
-; Wed May 06 19:12:53 CEST 2015
+; Sat May 09 15:15:27 CEST 2015
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -97,16 +97,21 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot cookerThreeStars
-		(type INTEGER)
-		(default 0)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot %3AJADE-PROPERTIES-GENERATE-ONTOLOGY
 		(type SYMBOL)
 		(allowed-values FALSE TRUE)
 		(default TRUE)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot cookerThreeStars
+		(type INTEGER)
+		(default 0)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot requestingHotel
+		(type INSTANCE)
+;+		(allowed-classes Hotel)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(multislot addresses
 		(type STRING)
@@ -119,13 +124,13 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot day
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot %3AJADE-PROPERTIES-NAME
 		(type STRING)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot day
+		(type INTEGER)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot cleaner
 		(type INTEGER)
@@ -141,14 +146,14 @@
 		(default 0)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(single-slot hotelmania-ontology_Class1
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot %3AJADE-PROPERTIES-COMPATIBILITY
 		(type SYMBOL)
 		(allowed-values J2ME JavaBeans Classes)
 		(default Classes)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot hotelmania-ontology_Class1
-		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot %3AONTOLOGYNAME
@@ -289,6 +294,11 @@
 	(single-slot staff
 		(type INSTANCE)
 ;+		(allowed-classes Staff)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot requestingHotel
+		(type INSTANCE)
+;+		(allowed-classes Hotel)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
